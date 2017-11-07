@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3f51b5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+<!--
+    <color name="colorAccent">#FF4081</color>
+-->
+    <color name="colorAccent">#470a65</color>
+    <color name="loginBackground">#212023</color>
+    <color name="brighterPurple">#773895</color>
+    <color name="mainPurple">#470a65</color>
+    <color name="lightGreen">#a2ded0</color>
+    <color name="darkGreen">#7fdec8</color>
+    <color name="darkGray">#b4b4b4</color>
+    <color name="lightGray">#ebebeb</color>
+<!--
+    <color name="lightGray">#faefef</color>
+-->
+    <color name="transparentLighterGray">#3ff4f4f4</color>
+    <color name="errorRed">#df3d3d</color>
+    <color name="textColor">#484848</color>
+
+    <!-- background color-->
+    <color name="background_transparent">#00000000</color>
+    <color name="background_white">#FFFFFFFF</color>
+    <color name="background_black">#000000</color>
+    <color name="background_border_gray">#A0A0A0</color>
+
+    <!--text color-->
+    <color name="text_black">#000000</color>
+    <color name="text_orange">#ffa500</color>
+    <color name="text_pink">#ffc0cb</color>
+    <color name="text_green">#008000</color>
+    <color name="text_forestgreen">#228B22</color>
+    <color name="text_limegreen">#32CD32</color>
+    <color name="text_red">#df3d3d</color>
+    <color name="text_dark_gray">#484848</color>
+
+</resources>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/contact_profile"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="com.picup.calling.ContactProfileActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mainPurple"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:contentInsetStart="0dp">
+
+        <LinearLayout
+            android:id="@+id/navigate_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:background="@color/mainPurple"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/navigate_north_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/back_imageview"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    app:srcCompat="@drawable/ic_white_back"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/profile_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profile_layout_height"
+                android:background="@color/lightGray">
+
+                <TextView
+                    android:id="@+id/duration_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/profile_layout_center"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="2.5dp"
+                    android:text="@string/unknown_label"
+                    android:textSize="@dimen/text_size_16"
+                    android:textStyle="bold"/>
+
+                <View
+                    android:id="@+id/profile_layout_center"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_centerInParent="true"/>
+
+                <TextView
+                    android:id="@+id/phone_number_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/profile_layout_center"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="2.5dp"
+                    android:text="@string/phone_number_label"
+                    android:textSize="@dimen/text_size_18"/>
+            </RelativeLayout>
+
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/unknown_profile_contact_control_ground_height"/>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/unknown_profile_contact_control_top_height"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/unknown_profile_contact_control_float_height">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/unknown_profile_contact_control_height"
+                    android:layout_centerInParent="true"
+                    android:background="@color/lightGray"
+                    android:orientation="horizontal"
+                    android:paddingEnd="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingStart="20dp"
+                    android:weightSum="1">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.45">
+
+                        <Button
+                            android:id="@+id/add_contact_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:background="@android:color/transparent"
+                            android:text="@string/dialog_menu_create_contact"
+                            android:textColor="@color/text_dark_gray"
+                            android:textSize="@dimen/text_size_12"/>
+                    </RelativeLayout>
+
+                    <android.support.v4.widget.Space
+                        android:id="@+id/add_contact_separator"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"/>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.45">
+
+                        <Button
+                            android:id="@+id/add_to_exist_contact_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:background="@android:color/transparent"
+                            android:text="@string/dialog_menu_update_existing"
+                            android:textColor="@color/text_dark_gray"
+                            android:textSize="@dimen/text_size_12"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@id/call_imageview"
+                    android:layout_width="@dimen/unknown_profile_contact_call_icon_size"
+                    android:layout_height="@dimen/unknown_profile_contact_call_icon_size"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_white_purple_phone"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"/>
+
+</LinearLayout>

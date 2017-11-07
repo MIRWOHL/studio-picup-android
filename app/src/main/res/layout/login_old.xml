@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/loginBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:paddingBottom="10dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:background="@android:color/transparent">
+        <ImageView
+            android:layout_width="wrap_content"
+            app:srcCompat="@mipmap/logo"
+            android:id="@+id/logo_imageview"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="false"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/credential_layout"
+            android:layout_below="@+id/logo_imageview"
+            android:layout_marginTop="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/username_icon"
+                    android:id="@+id/username_icon_imageview"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true" />
+<!--
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:id="@+id/username_edittext"
+                    android:layout_toRightOf="@+id/username_icon_imageview"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:hint="@string/username_hint"
+                    android:textColor="@color/lightGray"
+                    android:background="@android:color/transparent"
+                    android:maxLines="1"
+                    android:inputType="type"
+                    android:textColorHint="@color/darkGray"
+                    android:textSize="14sp" />
+-->
+                <com.picup.calling.typefaced.RobotoEditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:id="@+id/username_edittext"
+                    android:layout_toRightOf="@+id/username_icon_imageview"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:hint="@string/username_hint"
+                    android:textColor="@color/lightGray"
+                    android:background="@android:color/transparent"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:textColorHint="@color/darkGray"
+                    android:textSize="14sp"
+                    app:typeface="roboto_light"/>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/x_icon"
+                    android:id="@+id/clear_username_imageview"
+                    android:layout_alignParentRight="true" />
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp" android:background="@color/darkGray"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/password_icon"
+                    android:id="@+id/password_icon_imageview"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true" />
+<!--
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:inputType="textPassword"
+                    android:ems="10"
+                    android:id="@+id/password_edittext"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@+id/password_icon_imageview"
+                    android:hint="@string/password_hint"
+                    android:textColor="@color/lightGray"
+                    android:background="@android:color/transparent"
+                    android:textColorHint="@color/darkGray"
+                    android:textSize="14sp" />
+-->
+                <com.picup.calling.typefaced.RobotoEditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:inputType="textPassword"
+                    android:ems="10"
+                    android:id="@+id/password_edittext"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@+id/password_icon_imageview"
+                    android:hint="@string/password_hint"
+                    android:textColor="@color/lightGray"
+                    android:background="@android:color/transparent"
+                    android:textColorHint="@color/darkGray"
+                    android:textSize="14sp"
+                    app:typeface="roboto_light"/>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/x_icon"
+                    android:id="@+id/clear_password_imageview"
+                    android:layout_alignParentRight="true" />
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp" android:background="@color/darkGray"/>
+        </LinearLayout>
+<!--
+        <TextView
+            android:type="@string/forgot_password_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/credential_layout"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:id="@+id/forgot_password_textview"
+            android:textColor="@color/darkGray" />
+-->
+        <com.picup.calling.typefaced.RobotoTextView
+            android:text="@string/forgot_password_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/credential_layout"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:id="@+id/forgot_password_textview"
+            android:textColor="@color/darkGray"
+            app:typeface="roboto_light"
+            android:contentDescription="@string/forgot_password_description" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/login_button"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="@string/login_label"
+            android:layout_below="@+id/forgot_password_textview"
+            android:background="@drawable/lightergray_transparent_button"
+            android:textColor="@color/lightGray"
+            android:layout_marginTop="30dp"
+            android:textSize="16sp" />
+<!--
+        <TextView
+            android:type="@string/or_signin_with_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/or_signin_with_textview"
+            android:layout_below="@+id/login_button"
+            android:textColor="@color/darkGray"
+            android:layout_marginTop="80dp" />
+-->
+        <com.picup.calling.typefaced.RobotoTextView
+            android:text="@string/or_signin_with_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/or_signin_with_textview"
+            android:layout_below="@+id/login_button"
+            android:textColor="@color/darkGray"
+            android:layout_marginTop="80dp"
+            app:typeface="roboto_light"/>
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/social_login_layout"
+            android:layout_below="@+id/or_signin_with_textview"
+            android:layout_alignLeft="@id/or_signin_with_textview"
+            android:layout_alignRight="@id/or_signin_with_textview"
+            android:layout_marginTop="10dp">
+
+            <Button
+                    android:text="@string/facebook_label"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/facebook_login_button"
+                    tools:text="@string/facebook_label"
+                    android:background="@android:color/transparent"
+                    android:textColor="@android:color/white"
+                android:layout_alignParentLeft="true"
+                android:textStyle="bold"
+                android:textSize="30sp" />
+
+            <Button
+                android:text="@string/linkedin_label"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/linkedin_login_button"
+                android:background="@android:color/transparent"
+                android:textColor="@android:color/white"
+                android:layout_alignParentRight="true"
+                android:textStyle="bold"
+                android:textSize="30sp" />
+        </RelativeLayout>
+<!--
+        <TextView
+            android:type="@string/new_to_picup_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/new_to_picup_textview"
+            tools:type="@string/new_to_picup_label"
+            android:textColor="@color/darkGray"
+            android:layout_above="@+id/signup_button"
+            android:layout_centerHorizontal="true" />
+-->
+        <com.picup.calling.typefaced.RobotoTextView
+            android:text="@string/new_to_picup_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/new_to_picup_textview"
+            tools:text="@string/new_to_picup_label"
+            android:textColor="@color/darkGray"
+            android:layout_above="@+id/signup_button"
+            android:layout_centerHorizontal="true"
+            app:typeface="roboto_light"/>
+<!--
+        <Button
+            android:type="@string/signup_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/signup_button"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/lightergray_transparent_button"
+            android:textColor="@color/darkGray"
+            android:layout_alignParentBottom="true"
+            android:minHeight="40dp"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"/>
+-->
+        <com.picup.calling.typefaced.RobotoButton
+            android:text="@string/signup_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/signup_button"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/lightergray_transparent_button"
+            android:textColor="@color/darkGray"
+            android:layout_alignParentBottom="true"
+            android:minHeight="40dp"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:typeface="roboto_light"
+            android:layout_marginBottom="40dp" />
+    </RelativeLayout>
+<!--
+    <TextView
+        android:type="@string/authentication_error_message"
+        android:layout_width="match_parent"
+        android:id="@+id/error_message_textview"
+        android:layout_height="50dp"
+        android:background="@color/errorRed"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/lightGray"
+        android:minLines="2" />
+-->
+    <com.picup.calling.typefaced.RobotoTextView
+        android:text="@string/authentication_error_message"
+        android:layout_width="match_parent"
+        android:id="@+id/error_message_textview"
+        android:layout_height="50dp"
+        android:background="@color/errorRed"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/lightGray"
+        android:minLines="2"
+        app:typeface="roboto_light"
+        android:contentDescription="@string/failed_authentication_message" />
+
+</RelativeLayout>

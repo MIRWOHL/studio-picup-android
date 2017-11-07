@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.picup.calling.NewContactActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:id="@+id/header_section">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:background="@color/mainPurple"
+            android:id="@+id/action_layout">
+
+            <Button
+                android:text="@string/cancel_cap_label"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/cancel_button"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:textColor="@color/darkGray" />
+
+            <Button
+                android:text="@string/save_cap_label"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/save_button"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:textColor="@color/darkGray" />
+
+        </LinearLayout>
+
+        <TextView
+            android:text="@string/new_contact_label"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/title_textview"
+            android:layout_below="@+id/action_layout"
+            android:gravity="left|center_vertical"
+            android:textSize="@dimen/text_size_20"
+            android:layout_weight="10" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/lightGreen"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:id="@+id/primary_section"
+        >
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/ic_menu_add"
+                android:id="@+id/thumbnail_imageview" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/fullname_edittext"
+                android:hint="@string/fullname_label" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/phone_number_edittext"
+                    android:hint="@string/phone_number_label" />
+
+                <Spinner
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/primary_phone_type_spinner"
+                    android:layout_weight="2" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/additional_numbers_header"
+        android:background="@android:color/holo_blue_light">
+
+        <TextView
+            android:text="Additional Numbers"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/additional_numbers_title_textview"
+            android:layout_weight="3"
+            android:gravity="center_vertical"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_16" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@android:drawable/ic_menu_add"
+            android:id="@+id/additional_numbers_add_imagebutton"
+            android:layout_weight="1"
+            android:background="@android:color/transparent" />
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:id="@+id/additional_number_listview" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/additional_info_header"
+        android:background="@android:color/holo_green_light">
+
+        <TextView
+            android:text="Additional Info"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/additional_info_title_textview"
+            android:layout_weight="3"
+            android:gravity="center_vertical"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_16" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@android:drawable/ic_menu_add"
+            android:id="@+id/additional_info_add_imagebutton"
+            android:layout_weight="1"
+            android:background="@android:color/transparent" />
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:id="@+id/additional_info_listview" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/add_more_fields_header"
+        android:background="@android:color/holo_orange_light">
+
+        <TextView
+            android:text="Add More Fields"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/add_more_fields_title_textview"
+            android:layout_weight="3"
+            android:gravity="center_vertical"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_16" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@android:drawable/ic_menu_add"
+            android:id="@+id/add_more_fields_add_imagebutton"
+            android:layout_weight="1"
+            android:background="@android:color/transparent" />
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:id="@+id/add_more_field_listview" />
+
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Unique identifier for Logo contact -->
+    <string name="APP_MIMETYPE_CONTACT">PICUP_APP.android.cursor.item/APPtoken</string>
+
+    <!-- Logcat filter -->
+    <string name="app_logcat_filter">picup OkHttp</string>
+</resources>

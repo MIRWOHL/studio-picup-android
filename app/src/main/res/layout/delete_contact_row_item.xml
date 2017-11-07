@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+
+    <CheckBox
+        android:id="@+id/delete_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp" />
+
+    <RelativeLayout
+        android:id="@+id/thumbnail_layout"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_toRightOf="@+id/delete_checkbox"
+        android:background="@drawable/contact_thumbnail_background">
+
+        <ImageView
+            android:id="@+id/thumbnail_imageview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@drawable/contact_thumbnail_background" />
+
+        <com.picup.calling.typefaced.RobotoTextView
+            android:id="@+id/initial_textview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="false"
+            android:focusable="false"
+            android:gravity="center"
+            android:textSize="@dimen/text_size_16" />
+
+    </RelativeLayout>
+
+    <com.picup.calling.typefaced.RobotoTextView
+        android:id="@+id/duration_textview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="4dp"
+        android:layout_toEndOf="@+id/thumbnail_layout"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:lines="1"
+        android:text="@string/contact_name_label"
+        android:textSize="@dimen/text_size_16"
+        app:typeface="roboto_regular" />
+
+</RelativeLayout>

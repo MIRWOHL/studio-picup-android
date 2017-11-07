@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/call_item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="false"
+    android:focusable="false"
+    android:paddingBottom="10dp"
+    android:paddingEnd="20dp"
+    android:paddingStart="20dp"
+    android:paddingTop="10dp">
+
+    <RelativeLayout
+        android:id="@+id/thumbnail_layout"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/contact_thumbnail_background"
+        android:clickable="false">
+
+        <ImageView
+            android:id="@+id/thumbnail_imageview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@drawable/contact_thumbnail_background"
+            android:clickable="true"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+
+        <com.picup.calling.typefaced.RobotoTextView
+            android:id="@+id/initial_textview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="false"
+            android:clickable="true"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center"
+            android:textIsSelectable="false"
+            android:textSize="@dimen/text_size_14"
+            app:typeface="roboto_bold" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/call_state_layout"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_toEndOf="@+id/thumbnail_layout"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp">
+
+        <ImageView
+            android:id="@+id/call_direction_imageview"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            app:srcCompat="@drawable/ic_call_made_black" />
+
+        <ImageView
+            android:id="@+id/call_result_imageview"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            app:srcCompat="@drawable/ic_call_received_black" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/call_info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toEndOf="@+id/call_state_layout"
+        android:layout_toStartOf="@+id/info_button"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical">
+
+        <com.picup.calling.typefaced.RobotoTextView
+            android:id="@+id/caller_textview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_toRightOf="@id/thumbnail_imageview"
+            android:layout_marginEnd="60dp"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:ellipsize="end"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:text="@string/contact_name_label"
+            android:textSize="@dimen/text_size_14"
+            android:textStyle="bold"
+            app:typeface="roboto_bold" />
+
+        <TextView
+            android:id="@+id/department_textview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="@string/contact_name_label"
+            android:textSize="@dimen/text_size_12" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/time_layout"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="10dp"
+        android:layout_toStartOf="@+id/info_button"
+        >
+
+        <TextView
+            android:id="@+id/time_textview"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:gravity="top|end"
+            android:text="0:00"
+            android:textSize="@dimen/text_size_12" />
+
+        <TextView
+            android:id="@+id/marker_textview"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/text_size_3"
+            android:gravity="top|start"
+            android:text="am"
+            android:textSize="@dimen/text_size_10" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/info_button"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:clickable="true"
+        android:src="@drawable/ic_info"/>
+
+</RelativeLayout>

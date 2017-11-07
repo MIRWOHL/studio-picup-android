@@ -1,0 +1,9 @@
+<resources>
+    <!-- contact_profile_unknown-->
+    <dimen name="profile_layout_height">170dp</dimen>
+    <dimen name="unknown_profile_contact_control_top_height">160dp</dimen>
+    <dimen name="unknown_profile_contact_control_float_height">65dp</dimen>
+    <dimen name="unknown_profile_contact_control_height">35dp</dimen>
+    <dimen name="unknown_profile_contact_control_ground_height">40dp</dimen>
+    <dimen name="unknown_profile_contact_call_icon_size">55dp</dimen>
+</resources>

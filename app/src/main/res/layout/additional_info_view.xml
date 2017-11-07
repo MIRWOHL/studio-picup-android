@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="80dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/remove_imageview"
+        android:layout_marginRight="110dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/email_edittext"
+            android:contentDescription="@string/email_label"
+            android:hint="@string/email_text"
+            android:imeOptions="actionNext"
+            android:textSize="@dimen/text_size_14" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/company_name_edittext"
+            android:contentDescription="@string/company_name_label"
+            android:hint="@string/company_name_label"
+            android:inputType="text|textCapWords"
+            android:imeOptions="actionNext"
+            android:textSize="@dimen/text_size_14" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_remove_red"
+        android:id="@+id/remove_imageview"
+        android:layout_weight="1"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true" />
+
+</RelativeLayout>

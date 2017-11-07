@@ -1,0 +1,16 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    tools:context="com.picup.calling.PopupContactDetailEmailTabContent">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <com.picup.calling.base.ExpandableHeightListView
+        android:id="@+id/contact_detail_email_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null" />
+</FrameLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/call_item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:clickable="false"
+    android:focusable="false"
+    android:paddingBottom="10dp"
+    android:paddingEnd="20dp"
+    android:paddingStart="20dp"
+    android:paddingTop="10dp">
+
+    <LinearLayout
+        android:id="@+id/left_layout"
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <ImageView
+            android:id="@+id/call_direction_imageview"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/call_result_imageview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_call_made_black"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <ImageView
+            android:id="@+id/call_result_imageview"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/call_direction_imageview"
+            app:srcCompat="@drawable/ic_call_received_black"
+            tools:layout_editor_absoluteX="0dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/center_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@+id/left_layout"
+        android:layout_toStartOf="@+id/right_layout"
+        android:gravity="right"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <TextView
+            android:id="@+id/timestamp_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:gravity="left"
+            android:textSize="@dimen/text_size_12"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/call_direction_imageview"
+            app:layout_constraintRight_toLeftOf="@+id/department_textview"
+            tools:layout_editor_absoluteY="8dp" />
+
+        <TextView
+            android:id="@+id/callee_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:gravity="left"
+            android:textSize="@dimen/text_size_10"
+            app:layout_constraintLeft_toRightOf="@+id/call_result_imageview"
+            app:layout_constraintRight_toLeftOf="@+id/duration_textview"
+            tools:layout_editor_absoluteY="28dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/right_layout"
+        android:layout_width="120dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <TextView
+            android:id="@+id/department_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="right"
+            android:lines="1"
+            android:textSize="@dimen/text_size_12"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteX="243dp"
+            tools:layout_editor_absoluteY="10dp" />
+
+        <TextView
+            android:id="@+id/duration_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/thumbnail_imageview"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:ellipsize="end"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="right"
+            android:lines="1"
+            android:textSize="@dimen/text_size_10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/callee_textview"
+            tools:layout_editor_absoluteY="0dp" />
+    </LinearLayout>
+
+
+</RelativeLayout>

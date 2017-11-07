@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.picup.calling.dialog.DiscardDialogFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:text="Discard Changes"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:textStyle="bold" />
+
+    <TextView
+        android:text="All changes will be discarded."
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/textView5"
+        android:gravity="center_vertical" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:text="@string/cancel_cap_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cancel_button"
+            android:layout_toLeftOf="@+id/ok_button"
+            android:textColor="@color/mainPurple"
+            android:background="@android:color/transparent" />
+
+        <Button
+            android:text="@string/ok_cap_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ok_button"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/mainPurple"
+            android:background="@android:color/transparent" />
+    </RelativeLayout>
+</LinearLayout>

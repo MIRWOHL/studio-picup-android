@@ -1,0 +1,40 @@
+<resources>
+    <style name="AppThemeGeneral" parent="AppTheme">
+        <item name="android:autoCompleteTextViewStyle">@style/purpleCursor</item>
+        <item name="android:editTextStyle">@style/whiteCursor</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@color/mainPurple</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@color/mainPurple</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="windowActionBarOverlay">true</item>
+        <!--<item name="android:windowDrawsSystemBarBackgrounds">true</item>-->
+        <!--<item name="android:statusBarColor">@android:color/transparent</item>-->
+        <item name="android:autoCompleteTextViewStyle">@style/purpleCursor</item>
+        <item name="android:editTextStyle">@style/whiteCursor</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:colorBackground">@color/lightGray</item>
+    </style>
+
+<!--
+    <style name="cursorColor" parent="Widget.AppCompat.AutoCompleteTextView">
+        <item name="android:textCursorDrawable">@drawable/purple_shape</item>
+    </style>
+-->
+
+    <style name="purpleCursor" parent="Widget.AppCompat.AutoCompleteTextView">
+        <item name="android:textCursorDrawable">@drawable/purple_shape</item>
+    </style>
+
+    <style name="whiteCursor" parent="Widget.AppCompat.EditText">
+        <item name="android:textCursorDrawable">@drawable/white_shape</item>
+    </style>
+    
+</resources>

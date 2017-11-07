@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.picup.calling.tab.ActivitiesTab"
+    android:orientation="vertical"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp">
+
+    <com.picup.calling.typefaced.RobotoTextView
+        android:id="@+id/company_calls_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/company_calls_label"
+        android:textColor="@color/calls_content_tab_color_selector"
+        android:textSize="@dimen/text_size_12"
+        app:typeface="roboto_light" />
+<!-- UNITE 1820 using this as the department since only 2 tabs for now and want this tab to display as department-->
+</LinearLayout>

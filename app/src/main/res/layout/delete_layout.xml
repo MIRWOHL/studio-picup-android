@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.picup.calling.DeleteActivity">
+
+    <RelativeLayout
+        android:id="@+id/north_layout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/mainPurple">
+
+        <CheckBox
+            android:id="@+id/select_all_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/selection_count_textview"
+            android:layout_alignBottom="@+id/selection_count_textview"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            app:buttonTint="@android:color/white" />
+
+        <TextView
+            android:id="@+id/selection_count_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toEndOf="@+id/select_all_checkbox"
+            android:text="0"
+            android:textColor="@color/lightGray" />
+
+        <TextView
+            android:id="@+id/selected_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/selection_count_textview"
+            android:text="@string/selected_label"
+            android:textColor="@color/lightGray" />
+
+        <Button
+            android:id="@+id/done_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/transparent"
+            android:text="@string/delete_cap_label"
+            android:textColor="@color/lightGray"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/lightGray">
+
+        <EditText
+            android:id="@+id/search_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/white"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:paddingStart="30dp" />
+
+        <ImageView
+            android:id="@+id/magnifier_imageview"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:clickable="false"
+            android:padding="10dp"
+            app:srcCompat="@drawable/ic_magnifier" />
+
+        <TextView
+            android:id="@+id/hint_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/magnifier_imageview"
+            android:text="@string/query_hint_label" />
+
+        <ImageView
+            android:id="@+id/clear_imageview"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:clickable="false"
+            android:padding="10dp"
+            app:srcCompat="@drawable/ic_clear_black" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp">
+
+        <ListView
+            android:id="@+id/delete_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null" />
+    </RelativeLayout>
+</LinearLayout>

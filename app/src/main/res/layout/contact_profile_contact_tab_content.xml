@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:paddingEnd="20dp"
+              android:paddingStart="20dp">
+
+    <TextView
+        android:id="@+id/additional_numbers_textview"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/additional_numbers_label"
+        android:textStyle="bold"/>
+
+    <com.picup.calling.base.ExpandableHeightListView
+        android:id="@+id/additional_numbers_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"/>
+
+    <TextView
+        android:id="@+id/email_address_textview"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/email_label"
+        android:textStyle="bold"/>
+
+    <com.picup.calling.base.ExpandableHeightListView
+        android:id="@+id/additional_email_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"/>
+
+    <!--
+    <TextView
+        android:id="@+id/missing_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/missing_label"
+        android:textStyle="italic"
+        android:visibility="gone"/>-->
+
+    <com.picup.calling.base.ExpandableHeightListView
+        android:id="@+id/additional_info_company_name_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
+
+    <com.picup.calling.typefaced.RobotoTextView
+        android:text="@string/phone_type_label"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:id="@+id/type_textview"
+        android:background="@android:color/transparent"
+        android:textColor="@drawable/item_color_selector"
+        android:layout_weight="3"
+        android:gravity="left|center_vertical"
+        android:contentDescription="@string/phone_type_label"
+        android:textSize="@dimen/text_size_16"
+        app:typeface="roboto_light" />
+
+    <com.picup.calling.typefaced.RobotoTextView
+        android:text="@string/phone_number_label"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:id="@+id/number_textview"
+        android:background="@android:color/transparent"
+        android:textColor="@drawable/item_color_selector"
+        android:layout_weight="5"
+        android:gravity="left|center_vertical"
+        android:textSize="@dimen/text_size_16"
+        app:typeface="roboto_light" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_call_grey"
+        android:id="@+id/icon_imageview"
+        android:layout_weight="1"
+        android:layout_gravity="center" />
+
+</LinearLayout>

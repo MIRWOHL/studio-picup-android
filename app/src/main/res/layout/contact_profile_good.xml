@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contact_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.picup.calling.ContactProfileActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mainPurple"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:contentInsetStart="0dp">
+
+        <LinearLayout
+            android:id="@+id/navigate_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:background="@color/mainPurple"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/navigate_north_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/back_imageview"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    app:srcCompat="@drawable/ic_white_back" />
+
+                <ImageView
+                    android:id="@+id/edit_imageview"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toLeftOf="@+id/delete_imageview"
+                    app:srcCompat="@drawable/ic_edit_white" />
+
+                <ImageView
+                    android:id="@+id/delete_imageview"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/ic_delete_white" />
+
+            </RelativeLayout>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/profile_north_layout"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:layout_weight="1"
+                app:tabIndicatorColor="@color/contact_profile_tab_color">
+
+            </android.support.design.widget.TabLayout>
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/profile_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/profile_north_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:background="@color/lightGray">
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/thumbnail_layout"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/white_circle_background">
+
+                    <ImageView
+                        android:id="@+id/thumbnail_imageview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        app:srcCompat="@drawable/white_circle_background" />
+
+                    <TextView
+                        android:id="@+id/initial_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/duration_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/thumbnail_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/fullname_label"
+                    android:textSize="@dimen/text_size_16"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/phone_number_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/duration_textview"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/phone_number_label"
+                    android:textSize="@dimen/text_size_18" />
+
+                <TextView
+                    android:id="@+id/phone_type_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/phone_number_textview"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/phone_type_label"
+                    android:textSize="@dimen/text_size_12" />
+
+                <RelativeLayout
+                    android:id="@+id/profile_south_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/profile_north_layout">
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/call_imageview"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/phone_type_textview"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/white_circle_background"
+                    app:srcCompat="@drawable/ic_white_purple_phone" />
+            </RelativeLayout>
+
+            <com.picup.calling.base.WrapContentHeightViewPager
+                android:id="@+id/view_pager"
+                class="android.support.v4.view.ViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.picup.calling.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:id="@+id/tab_layout"
+            app:tabIndicatorHeight="2dp"
+            app:tabIndicatorColor="@color/color_4_tab"
+            android:background="@color/mainPurple">
+
+        </android.support.design.widget.TabLayout>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@color/mainPurple"
+            android:contentInsetEnd="0dp"
+            android:contentInsetLeft="0dp"
+            android:contentInsetRight="0dp"
+            android:contentInsetStart="0dp"
+            android:weightSum="1"
+            app:contentInsetEnd="0dp"
+            app:contentInsetLeft="0dp"
+
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <include
+                layout="@layout/toolbar_content"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </android.support.v7.widget.Toolbar>
+
+        <RelativeLayout
+            android:id="@+id/search_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/lightGray">
+
+            <EditText
+                android:id="@+id/search_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="6dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="6dp"
+                android:background="@android:color/white"
+                android:ems="10"
+                android:hint="@string/query_hint_label"
+                android:inputType="textPersonName"
+                android:paddingEnd="16dp"
+                android:paddingStart="26dp"
+                android:textColor="@color/textColor" />
+
+            <ImageView
+                android:id="@+id/magnifier_imageview"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:clickable="false"
+                android:padding="5dp"
+                app:srcCompat="@drawable/ic_magnifier" />
+
+            <TextView
+                android:id="@+id/hint_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/magnifier_imageview"
+                android:clickable="false"
+                android:text="@string/query_hint_label"
+                android:textColor="@color/darkGray" />
+
+            <ImageView
+                android:id="@+id/clear_search_imageview"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:padding="8dp"
+                app:srcCompat="@drawable/ic_clear_black" />
+
+            <SearchView
+                android:id="@+id/search_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/white"
+                android:focusableInTouchMode="true"
+                android:visibility="gone"
+                app:iconifiedByDefault="false" />
+        </RelativeLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/add_contact_floating_action_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_add_white"
+        android:background="@color/lightGreen"
+        app:backgroundTint="@color/darkGreen" />
+
+    <include
+        android:id="@+id/content_main"
+        layout="@layout/content_main2" />
+
+</android.support.design.widget.CoordinatorLayout>

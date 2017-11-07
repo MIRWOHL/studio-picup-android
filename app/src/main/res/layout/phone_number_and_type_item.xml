@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@android:color/transparent">
+
+    <TextView
+        android:text="@string/phone_number_label"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:id="@+id/number_textview"
+        android:layout_weight="5"
+        android:contentDescription="@string/phone_number_label"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical" />
+
+    <TextView
+        android:text="@string/phone_type_label"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:id="@+id/type_textview"
+        android:layout_weight="4"
+        android:contentDescription="@string/phone_type_label"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/ic_phone_black"
+        android:id="@+id/icon_imageview"
+        android:layout_weight="1"
+        android:layout_gravity="center" />
+
+</LinearLayout>

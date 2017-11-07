@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.picup.calling.NumberConfirmActivity">
+
+    <ImageView
+        android:id="@+id/number_imageview"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="89dp"
+        android:contentDescription="@null"
+        app:srcCompat="@drawable/outgoing_call_icon"/>
+
+    <TextView
+        android:id="@+id/approve_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/number_imageview"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:lines="2"
+        android:text="@string/approve_your_number_label"
+        android:textAllCaps="true"
+        android:textSize="@dimen/text_size_18"/>
+
+    <LinearLayout
+        android:id="@+id/required_textview_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/approve_textview"
+        android:layout_marginTop="55dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.15"/>
+
+        <TextView
+            android:id="@+id/required_textview"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:gravity="center"
+            android:lines="2"
+            android:text="@string/required_number_label"
+            android:textSize="@dimen/text_size_16"/>
+
+        <android.support.v4.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.15"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/number_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/required_textview_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="57dp"
+        android:gravity="center_horizontal"
+        android:hint="@string/phone_number_label"
+        android:imeOptions="actionDone"
+        android:inputType="phone"
+        android:textColor="@color/mainPurple"
+        android:textColorHint="@color/mainPurple"
+        android:textSize="@dimen/text_size_28"/>
+
+    <Button
+        android:id="@+id/approve_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="41dp"
+        android:background="@android:color/transparent"
+        android:text="@string/approve_label"
+        android:textColor="@color/mainPurple"
+        android:textSize="@dimen/text_size_18"/>
+</RelativeLayout>

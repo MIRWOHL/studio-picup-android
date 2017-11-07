@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/lightGray"
+    android:gravity="center_vertical"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp">
+
+    <com.picup.calling.typefaced.RobotoTextView
+        android:text="@string/call_from_type_label"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:id="@+id/call_from_type_dropdown_textview"
+        android:background="@android:color/transparent"
+        android:gravity="left|center_vertical"
+        android:contentDescription="@string/call_from_type_label"
+        android:lines="1"
+        android:ellipsize="end"
+        android:textSize="@dimen/text_size_16"
+        app:typeface="roboto_light"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+
+</LinearLayout>

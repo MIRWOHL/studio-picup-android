@@ -1,0 +1,180 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.picup.calling.KeypadTabContent">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/call_to_layout">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/call_to_result_layout"
+        android:layout_below="@+id/call_to_layout">
+
+    </RelativeLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:id="@+id/dialpad_layout"
+        android:background="@color/lightGray"
+        android:showDividers="none"
+        android:layout_alignParentBottom="true">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_call_grey"
+                android:id="@+id/imageButton2" android:layout_column="0" android:layout_weight="1"
+                android:background="@drawable/keypad_background" />
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_key_1a"
+                android:id="@+id/imageButton" android:layout_column="1" android:layout_weight="1"
+                android:background="@drawable/keypad_background" />
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_key_2c"
+                android:id="@+id/imageButton3" android:layout_column="2" android:layout_weight="1"
+                android:background="@drawable/keypad_background" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_key_1a"
+                android:id="@+id/imageButton4" android:layout_column="0" android:layout_weight="1"
+                android:background="@drawable/keypad_background" />
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_key_1a"
+                android:id="@+id/imageButton5" android:layout_column="1" android:layout_weight="1"
+                android:background="@drawable/keypad_background" />
+            <android.support.v7.widget.AppCompatImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_key_2c"
+                android:id="@+id/imageButton6" android:layout_column="2" android:layout_weight="1"
+                android:background="@drawable/keypad_background" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <android.support.v7.widget.AppCompatImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_key_1a"
+                android:id="@+id/imageButton7" android:layout_column="0" android:layout_weight="1"
+                android:background="@drawable/keypad_background" />
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_key_1a"
+                android:id="@+id/imageButton8" android:layout_column="1" android:layout_weight="1"
+                android:background="@drawable/keypad_background" />
+            <android.support.v7.widget.AppCompatImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_key_2c"
+                android:id="@+id/imageButton9" android:layout_column="2" android:layout_weight="1"
+                android:background="@drawable/keypad_background" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <android.support.v7.widget.AppCompatImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_key_1a"
+                android:id="@+id/imageButtonAsterisk" android:layout_column="0" android:layout_weight="1"
+                android:background="@drawable/keypad_background" />
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_key_1a"
+                android:id="@+id/imageButtonZero" android:layout_column="1" android:layout_weight="1"
+                android:background="@drawable/keypad_background" />
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_key_2c"
+                android:id="@+id/imageButtonPound" android:layout_column="2" android:layout_weight="1"
+                android:background="@drawable/keypad_background" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"  android:layout_column="0" android:layout_weight="1">
+
+            </FrameLayout>
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_call_shadow"
+                android:id="@+id/imageButtonCall" android:layout_column="1" android:layout_weight="1"
+                android:background="@drawable/keypad_background" />
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_backspace_black"
+                android:id="@+id/imageButtonBack" android:layout_column="2" android:layout_weight="1"
+                android:background="@drawable/keypad_background" />
+
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

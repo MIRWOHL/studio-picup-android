@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.picup.calling.tab.ActivitiesTab"
+    android:orientation="vertical"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp">
+
+    <com.picup.calling.typefaced.RobotoTextView
+        android:id="@+id/contact_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/contact_cap_label"
+        android:textColor="@color/contact_profile_tab_color"
+        android:textSize="@dimen/text_size_12"
+        app:typeface="roboto_light" />
+
+</LinearLayout>

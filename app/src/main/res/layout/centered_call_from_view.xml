@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="25dp" android:background="@android:color/transparent"
+    android:gravity="center_horizontal">
+
+    <com.picup.calling.typefaced.RobotoTextView
+        android:text="@string/phone_number_label"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/phone_textview"
+        android:background="@android:color/transparent"
+        android:textColor="@color/lightGray"
+        android:textSize="@dimen/text_size_14"
+        app:typeface="roboto_light"
+        android:gravity="center_vertical|center_horizontal" />
+</LinearLayout>

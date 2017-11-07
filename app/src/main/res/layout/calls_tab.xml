@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.picup.calling.tab.ActivitiesTab"
+    android:orientation="vertical"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp">
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/calls_imageview"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/calls_tab_image_selector" />
+
+    <com.picup.calling.typefaced.RobotoTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/calls_tab_title"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/color_4_tab"
+        app:typeface="roboto_light"
+        android:textSize="16sp"
+        android:id="@+id/activities_tab_textview"
+        android:layout_marginTop="10dp" />
+
+</LinearLayout>
